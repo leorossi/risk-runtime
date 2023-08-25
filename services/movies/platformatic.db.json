@@ -1,0 +1,32 @@
+{
+  "$schema": "https://platformatic.dev/schemas/v0.37.4/db",
+  "server": {
+    "hostname": "127.0.0.1",
+    "port": "3045",
+    "logger": {
+      "level": "error"
+    },
+    "keepAliveTimeout": 1
+  },
+  "db": {
+    "connectionString": "sqlite://./db.sqlite",
+    "graphql": true
+  },
+  "migrations": {
+    "dir": "./migrations",
+    "autoApply": true
+  },
+  "plugins": {
+    "paths": ["./plugin.js"]
+  },
+  "watch": false,
+  "telemetry": {
+    "serviceName": "movies",
+    "exporter": {
+      "type": "otlp",
+      "options": {
+        "url": "https://plt-development-risk-engine.fly.dev/v1/traces"
+      }
+    }
+  }
+}

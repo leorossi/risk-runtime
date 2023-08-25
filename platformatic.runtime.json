@@ -1,0 +1,20 @@
+{
+  "$schema": "https://platformatic.dev/schemas/v0.37.4/runtime",
+  "entrypoint": "keen-werewolf",
+  "allowCycles": false,
+  "hotReload": true,
+  "autoload": {
+    "path": "services",
+    "exclude": [
+      "docs"
+    ]
+  },
+  "clients": [
+    {
+      "schema": "asderas/asderas.openapi.json",
+      "name": "asderas",
+      "type": "openapi",
+      "serviceId": "movies"
+    }
+  ]
+}
