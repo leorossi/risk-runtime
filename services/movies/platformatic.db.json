@@ -10,7 +10,8 @@
   },
   "db": {
     "connectionString": "sqlite://./db.sqlite",
-    "graphql": true
+    "graphql": true,
+    "openapi": true
   },
   "migrations": {
     "dir": "./migrations",
