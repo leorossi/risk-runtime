@@ -35,6 +35,9 @@ jobs:
   calculate_risk:
     needs: build_and_deploy
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
     steps:
       - name: Calculate risk
         uses: platformatic/onestep/actions/calculate-risk@risks
