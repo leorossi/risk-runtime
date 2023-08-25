@@ -8,13 +8,5 @@
     "exclude": [
       "docs"
     ]
-  },
-  "clients": [
-    {
-      "schema": "asderas/asderas.openapi.json",
-      "name": "asderas",
-      "type": "openapi",
-      "serviceId": "movies"
-    }
-  ]
+  }
 }

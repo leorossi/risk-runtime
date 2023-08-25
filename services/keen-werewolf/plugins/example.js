@@ -11,8 +11,8 @@ module.exports = async function (fastify, opts) {
   })
 
   fastify.get('/swagger', async(req, reply) => {
-    const res = await request('http://movies.plt.local/documentation/jons')
-    const data = await res.body.json()
+    const res = await request('http://movies.plt.local/documentation/html')
+    const data = await res.body.text()
     return data
   })
 }
